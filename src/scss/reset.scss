@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  background-color: unset;
+}
+
+// Костыль для автозаполнения полей хрома
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  transition: background-color 600s 0s;
+}
+
+button {
+  border: none;
+  background-color: unset;
+}

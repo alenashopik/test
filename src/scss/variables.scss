@@ -1,0 +1,23 @@
+// Основной цвет сайта
+$base-color: rgba(90, 97, 237, 1);
+
+// Бэкграунды для элементов
+$main-bg-color: rgb(244, 245, 252);
+$form-bg-color: rgb(255, 255, 255);
+
+// Цвет для шрифтов
+$black-text-color: rgb(0, 0, 0);
+$white-text-color: rgb(255, 255, 255);
+$normal-text-color: rgb(17, 17, 17);
+$light-text-color: rgb(124, 124, 124);
+
+// Шрифты
+$main-font: 'Work Sans', 'Arial', sans-serif;
+$alt-font: 'PT Sans', 'Arial', sans-serif;
+
+// Цвета при ошибке
+$error-text-color: rgb(255, 34, 34);
+$error-dash-color: rgb(255, 40, 40);
+
+// Цвет подчеркивания формы
+$field-dash-color: rgb(242, 242, 242);

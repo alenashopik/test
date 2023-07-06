@@ -1,0 +1,124 @@
+<div class="sign-up__right sign-up-right">
+    <object class="sign-up-right__background-img"
+      id="background-img"
+      data="./images/svg/user-background.svg"
+      type="image/svg+xml"
+    ></object>
+    
+    <div class="sign-up-right__top">
+      <h3 class="sign-up-right__top-title">New user?</h3>
+      <p class="sign-up-right__top-text">Use the form below to create your account.</p>
+    </div>
+  
+    <form class="sign-up-right__form">
+      <div class="sign-up-right__form-registration registration">
+        <div class="registration__field">
+          <label class="registration__field-label" for="first-name">First Name</label>
+          <input class="registration__field-input"
+            type="text"
+            name="first-name"
+            id="first-name"
+            required
+          >
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="last-name">Last Name</label>
+          <input class="registration__field-input"
+            type="text"
+            name="last-name"
+            id="last-name"
+            required
+          >
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="nationality">Nationality</label>
+          <select class="registration__field-select custom-select"
+            name="nationality"
+            id="nationality"
+          >
+          </select>
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="email">E-mail</label>
+          <input class="registration__field-input"
+            type="email"
+            name="email"
+            id="email"
+            required
+          >
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="birth-day">Date of Birth</label>
+          <div class="registration__field-birthday birthday">
+            <select class="birthday__select birthday__select--day custom-select"
+              name="birth-day"
+              id="birth-day"
+            ></select>
+            <select class="birthday__select birthday__select--month custom-select"
+              name="birth-month"
+              id="birth-month"
+            ></select>
+            <select class="birthday__select birthday__select--year custom-select"
+              name="birth-year"
+              id="birth-year"
+            ></select>
+          </div>
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="gender-male">Gender</label>
+          <div class="registration__field-gender gender">
+            <div class="gender__radio">
+              <input class="gender__radio-input custom-radio"
+                type="radio"
+                name="gender"
+                id="gender-male"
+                value="male"
+              ><label class="gender__radio-label" for="gender-male">Male</label>
+            </div>
+            <div class="gender__radio">
+              <input class="gender__radio-input custom-radio"
+                type="radio"
+                name="gender"
+                id="gender-female"
+                value="female"
+                checked
+              ><label class="gender__radio-label" for="gender-female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="password">Password</label>
+          <input class="registration__field-input"
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            required
+          >
+        </div>
+        <div class="registration__field">
+          <label class="registration__field-label" for="password-confirm">Confirm Password</label>
+          <input class="registration__field-input"
+            type="password"
+            name="password-confirm"
+            id="password-confirm"
+            minlength="8"
+            required
+          >
+        </div>
+      </div>
+  
+      <div class="sign-up-right__form-bottom form-bottom">
+        <div class="form-bottom__block">
+          <p class="form-bottom__block-text">Have an account?</p>
+          <a class="form-bottom__block-link" href="#">Login</a>
+        </div>
+        <button class="form-bottom__button main-button">Complete Signup</button>
+      </div>
+    </form>
+  
+    <div class="sign-up-right__registered visibility-hidden">
+      <p class="sign-up-right__registered-title">Thank You!</p>
+      <p class="sign-up-right__registered-text">you registered!</p>
+    </div>
+  </div>

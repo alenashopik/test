@@ -1,0 +1,34 @@
+@keyframes bubbling {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.25;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  from { transform: translateX(0%); }
+  25% { transform: translateX(-2%); }
+  75% { transform: translateX(2%); }
+  to { transform: translateX(0%); }
+}
+
+@keyframes show {
+  from { opacity: 0%; }
+  to { opacity: 100%; }
+}
+
+@keyframes show-and-hide {
+  from { opacity: 0%; }
+  30% { opacity: 100%; }
+  75% { opacity: 100%; }
+  to { opacity: 0%; }
+}

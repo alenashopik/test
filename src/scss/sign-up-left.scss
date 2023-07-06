@@ -1,0 +1,28 @@
+// Левый блок
+.sign-up-left {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 137px;
+  background-color: $base-color;
+
+  &__title {
+    @include ellipsis(1);
+    align-self: flex-end;
+    margin: 0 4px 22px 0;
+    color: $white-text-color;
+    font-family: $alt-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    @media (max-width: 390px) {
+      font-size: 44px;
+      line-height: 46px;
+      margin-right: 6px;
+    }
+  }
+}

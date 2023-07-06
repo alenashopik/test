@@ -1,0 +1,77 @@
+
+// Кастомный фокус
+*:focus-visible {
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 1px;
+}
+
+// Стиль для основной кнопки
+// Добавлен белый бордер, указанный в макете
+.main-button {
+  padding: 5px;
+  border: 1px solid white;
+  font-family: $alt-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white-text-color;
+  background-color: $base-color;
+}
+
+// Кастомный селект
+.custom-select {
+  appearance: none;
+  border: none;
+  padding: 5px 13px 5px 0;
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='4' viewBox='0 0 8 4' fill='none' style='transform: rotate(0deg);' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.91815 0.0772947C7.80788 -0.0257649 7.62871 -0.0257649 7.51845 0.0772947L4.00387 3.36876L0.482394 0.0772947C0.372132 -0.0257649 0.192957 -0.0257649 0.082696 0.0772947C-0.0275653 0.180354 -0.0275653 0.347826 0.082696 0.450886L3.79713 3.92271C3.85226 3.97424 3.92117 4 3.99698 4C4.06589 4 4.14169 3.97424 4.19682 3.92271L7.91125 0.450886C8.02841 0.347826 8.02841 0.180354 7.91815 0.0772947Z' fill='black'/%3E%3C/svg%3E");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+// Кастомный радио-баттон
+.custom-radio {
+  appearance: none;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border: 1px solid $base-color;
+  border-radius: 50%;
+}
+
+.custom-radio:checked {
+  background-image: radial-gradient(circle, $base-color 3px, transparent 3px);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// Модальное окно с ошибкой валидации поля
+.popup-error {
+  @include ellipsis(2);
+  position: absolute;
+  min-width: 188px;
+  border-radius: 5px;
+  font-family: $main-font;
+  font-size: 12px;
+  color: $error-text-color;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+// Анимация
+.animation-bubbling { animation: bubbling 0.5s ease-in forwards; }
+.animation-shake { animation: shake 0.15s linear 2 forwards; }
+.animation-show { animation: show 0.8s ease-in forwards; }
+.animation-show-and-hide { animation: show-and-hide 5s ease-in backwards; }
+
+// Скрытие элементов
+.display-none {
+  display: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,236 @@
+// Правый блок
+.sign-up-right {
+  overflow: hidden;
+  position: relative;
+  padding: 40px 22px 33px 21px;
+  background-color: $form-bg-color;
+
+  // Фоновая картинка пользователя
+  &__background-img {
+    position: absolute;
+    left: 41.856%;
+    bottom: -11.642%;
+    height: 411px;
+    width: 411px;
+  }
+
+  // Верхняя часть с текстом
+  &__top {
+    
+    &-title {
+      @include ellipsis(1);
+      font-family: $main-font;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: -0.39px;
+      color: $normal-text-color;
+    }
+
+    &-text {
+      @include ellipsis(2);
+      font-family: $main-font;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -0.32px;
+      color: $normal-text-color;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 347px;
+    margin-top: 19px;
+    row-gap: 25px;
+    
+    // Основные поля для регистрации
+    .registration {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px 1.135%;
+      max-width: 485px;
+  
+      // Обёртка для полей
+      &__field {
+        flex-basis: 48.865%;
+        min-width: 188px;
+        min-height: 42px;
+        opacity: 0;
+        background-image: linear-gradient(0deg, $field-dash-color 1px, transparent 1px);
+  
+        @media (max-width: 586px) {
+          flex-basis: 100%;
+        }
+
+        // Галочка для валидного поля
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 54%;
+          right: 0;
+          width: 11px;
+          height: 8px;
+          background-image: url(../images/svg/tick.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0;
+          transition: opacity 0.5s;
+        }
+
+        &.valid::after {
+          opacity: 1;
+        }
+
+        // Лейбл с описанием поля
+        &-label {
+          @include ellipsis(1);
+          font-family: $main-font;
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 14px;
+          color: $light-text-color;
+        }
+  
+        // Текстовые поля (text, email, password)
+        &-input {
+          width: 100%;
+          padding: 5px 0;
+          font-family: $main-font;
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.05px;
+          color: $normal-text-color;
+        }
+  
+        // Селект для выбора национальности
+        &-select {
+          width: 100%;
+        }
+  
+        // Блок селектов дня рождения
+        .birthday {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 10px;
+  
+          &__select--day {
+            flex-basis: 56px;
+          }
+  
+          &__select--month {
+            flex-basis: 91px;
+          }
+  
+          &__select--year {
+            flex-basis: 70px;
+          }
+        }
+  
+        // Блок выбора пола
+        .gender {
+          display: flex;
+          column-gap: 19px;
+          padding: 5px 0 4px;
+  
+          &__radio {
+            display: flex;
+            align-items: center;
+            column-gap: 6px;
+              
+            &-label {
+              @include ellipsis(1);
+              font-family: $main-font;
+              font-size: 14px;
+              line-height: 16px;
+              color: $normal-text-color;
+            }
+          }
+        }
+      }
+
+      // Красные буквы и подчеркивание если поле не валидно
+      &__field.error {
+        background-image: linear-gradient(0deg, $error-dash-color 2px, transparent 2px);
+
+        .registration__field-input {
+          color: $error-text-color;
+        }
+      }
+    }
+
+    // Нижняя часть формы
+    .form-bottom {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+
+      // Блок с текстом и ссылкой
+      &__block {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+
+        &-text,
+        &-link {
+          font-family: $main-font;
+          font-size: 13px;
+          line-height: 15px;
+        }
+
+        &-text {
+          @include ellipsis(2);
+          font-weight: 300;
+          color: $black-text-color;
+        }
+
+        &-link {
+          @include ellipsis(1);
+          margin-left: 4px;
+          color: $base-color;
+        }
+      }
+
+      // Кнопка submit
+      &__button {
+        flex-shrink: 0;
+        width: 154px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__registered {
+    position: absolute;
+    top: 50%;
+    left: 64px;
+    margin-top: 3px;
+    transform: translateY(-50%);
+
+    &-title {
+      @include ellipsis(1);
+      font-family: $main-font;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26px;
+      letter-spacing: -0.44px;
+      color: $normal-text-color;
+    }
+
+    &-text {
+      @include ellipsis(2);
+      margin-top: 10px;
+      font-family: $main-font;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: -0.36px;
+      color: $normal-text-color;
+    }
+  }
+}
